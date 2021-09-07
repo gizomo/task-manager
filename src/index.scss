@@ -22,3 +22,35 @@ code {
     margin-right: 1rem;
   }
 }
+.task-exit-active {
+  animation: task 800ms ease-out forwards;
+}
+.task-enter-active {
+  animation: task 800ms ease-in alternate-reverse;
+}
+
+.alert-enter {
+  opacity: 0;
+}
+.alert-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+}
+.alert-exit-active {
+  opacity: 0;
+  transition: opacity 350ms ease-out;
+}
+
+@keyframes task {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    opacity: .7;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-200px);
+  }
+}
